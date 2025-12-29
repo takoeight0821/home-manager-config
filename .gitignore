@@ -1,0 +1,5 @@
+# Nix build result symlink
+result
+
+# Nix Flake lock file
+flake.lock
