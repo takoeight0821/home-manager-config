@@ -6,7 +6,7 @@ This directory contains a Nix configuration for managing a user's home environme
 
 *   `flake.nix`: Defines the flake's inputs (dependencies) like `nixpkgs` and `home-manager`, and specifies the output structure, pointing to `home.nix` for the main configuration.
 *   `home.nix`: Contains the core Home Manager configuration for the user `deck`. This is where packages, dotfiles, services, and environment variables are defined.
-*   `flake.lock`: A generated file that pins the exact versions of the flake's inputs, ensuring reproducible builds.
+*   `flake.lock` is gitignored, so input versions are not pinned in the repository; each machine resolves its own.
 
 The primary purpose of this setup is to provide a declarative, reproducible, and version-controlled home environment.
 
@@ -16,7 +16,7 @@ The configuration is managed using standard Nix and Home Manager commands.
 
 *   **Apply the configuration:** To activate the configuration defined in `home.nix`, run the following command from this directory:
     ```bash
-    home-manager switch
+    home-manager switch --flake .#deck
     ```
 
 *   **Update Dependencies:** To update the flake's inputs (like `nixpkgs` and `home-manager`) to their latest versions, run:
