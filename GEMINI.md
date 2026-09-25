@@ -6,9 +6,9 @@ This directory contains a Nix configuration for managing a user's home environme
 
 *   `flake.nix`: Defines the flake's inputs (dependencies) like `nixpkgs` and `home-manager`, and specifies the output structure, pointing to `home.nix` for the main configuration.
 *   `home.nix`: Contains the core Home Manager configuration for the user `deck`. This is where packages, dotfiles, services, and environment variables are defined.
-*   `flake.lock` is gitignored, so input versions are not pinned in the repository; each machine resolves its own.
+*   `flake.lock`: Gitignored, so input versions are not pinned in the repository; each machine resolves its own.
 
-The primary purpose of this setup is to provide a declarative, reproducible, and version-controlled home environment.
+The primary purpose of this setup is to provide a declarative and version-controlled home environment; input revisions are not pinned.
 
 ## Building and Running
 
